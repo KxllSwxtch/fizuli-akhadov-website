@@ -88,7 +88,7 @@ const ContactSection = () => {
 					{/* Карта */}
 					<div>
 						<iframe
-							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.202160012213!2d37.622504116292266!3d55.75582628055559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMjUuMiJF!5e0!3m2!1sen!2sru!4v1614075823707!5m2!1sen!2sru'
+							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.0459689250224!2d76.9428782761762!3d43.250458378385815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eeb38d5d70d%3A0xdebb6108a7ad460!2sPanfilov%20St%20126%2C%20Almaty%20050000%2C%20Kazakhstan!5e0!3m2!1sen!2skr!4v1737603960392!5m2!1sen!2skr'
 							width='100%'
 							height='300'
 							style={{ border: 0 }}
