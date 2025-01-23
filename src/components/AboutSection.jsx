@@ -13,9 +13,7 @@ const AboutSection = () => {
 							Основное направление деятельности
 						</h3>
 						<ul className='text-gray-700 space-y-2'>
-							<li>
-								— Лечение кариеса и его осложнений (пульпитов, периодонтитов)
-							</li>
+							<li>— Профессиональная гигиена полости рта (чистка зубов)</li>
 						</ul>
 					</div>
 
@@ -25,11 +23,7 @@ const AboutSection = () => {
 							Образование
 						</h3>
 						<ul className='text-gray-700 space-y-2'>
-							<li>УНИВЕРСИТЕТ</li>
-							{/* <li>
-								Клиническая ординатура в Центральной Государственной Медицинской
-								Академии Управления Делами Президента
-							</li> */}
+							<li>Университет имени С.А Асфендиярова</li>
 						</ul>
 					</div>
 				</div>
@@ -45,7 +39,7 @@ const AboutSection = () => {
 					</div>
 
 					{/* Правый блок - Повышение квалификации */}
-					<div className='bg-white shadow-md rounded-lg p-6 border border-blue-200'>
+					{/* <div className='bg-white shadow-md rounded-lg p-6 border border-blue-200'>
 						<h3 className='text-xl font-semibold text-blue-600 mb-4'>
 							Постоянно повышаю свою квалификацию, участвую в различных
 							конференциях и семинарах
@@ -53,7 +47,7 @@ const AboutSection = () => {
 						<ul className='text-gray-700 space-y-2'>
 							ИНФА ПО ПОВЫШЕНИЮ КВАЛИФИКАЦИИ
 						</ul>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</section>

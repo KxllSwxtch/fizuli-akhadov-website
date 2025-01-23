@@ -9,7 +9,7 @@ const Header = () => {
 				{/* Логотип */}
 				<div className='flex items-center space-x-2'>
 					<img
-						src='https://res.cloudinary.com/pomegranitedesign/image/upload/v1737598783/fizuli/AKHADOV.png'
+						src='https://res.cloudinary.com/pomegranitedesign/image/upload/v1737621939/fizuli/logo.jpg'
 						alt='Логотип'
 						className='w-30'
 					/>
@@ -20,21 +20,24 @@ const Header = () => {
 					<a href='#about' className='text-gray-700 hover:text-blue-500'>
 						Обо мне
 					</a>
-					<a href='#services' className='text-gray-700 hover:text-blue-500'>
-						Услуги
+					<a href='#principles' className='text-gray-700 hover:text-blue-500'>
+						Принципы моей работы
 					</a>
-					<a href='#portfolio' className='text-gray-700 hover:text-blue-500'>
+					{/* <a href='#portfolio' className='text-gray-700 hover:text-blue-500'>
 						Мои работы
-					</a>
-					<a href='#contact' className='text-gray-700 hover:text-blue-500'>
+					</a> */}
+					{/* <a href='#contact' className='text-gray-700 hover:text-blue-500'>
 						Контакты
-					</a>
+					</a> */}
 				</nav>
 
 				{/* Ссылка справа */}
 				<div className='hidden md:block'>
-					<a href='#certificates' className='text-gray-700 hover:text-blue-500'>
+					{/* <a href='#certificates' className='text-gray-700 hover:text-blue-500'>
 						Дипломы и сертификаты
+					</a> */}
+					<a href='#contact' className='text-gray-700 hover:text-blue-500'>
+						Контакты
 					</a>
 				</div>
 
@@ -71,20 +74,20 @@ const Header = () => {
 						>
 							Обо мне
 						</a>
-						<a
+						{/* <a
 							href='#services'
 							className='text-gray-700 hover:text-blue-500'
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Услуги
-						</a>
-						<a
+						</a> */}
+						{/* <a
 							href='#portfolio'
 							className='text-gray-700 hover:text-blue-500'
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Мои работы
-						</a>
+						</a> */}
 						<a
 							href='#contact'
 							className='text-gray-700 hover:text-blue-500'
@@ -92,13 +95,13 @@ const Header = () => {
 						>
 							Контакты
 						</a>
-						<a
+						{/* <a
 							href='#certificates'
 							className='text-gray-700 hover:text-blue-500'
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Дипломы и сертификаты
-						</a>
+						</a> */}
 					</div>
 				</nav>
 			)}

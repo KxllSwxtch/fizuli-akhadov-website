@@ -10,7 +10,7 @@ import {
 
 const PrinciplesSection = () => {
 	return (
-		<section className='bg-gray-50 py-12'>
+		<section className='bg-gray-50 py-12' id='principles'>
 			<div className='container mx-auto px-6 lg:px-12'>
 				<h2 className='text-3xl font-bold text-blue-600 mb-12 text-center'>
 					Работаю по принципам
@@ -64,7 +64,7 @@ const PrinciplesSection = () => {
 					</div>
 
 					{/* Правый блок текста */}
-					<div className='space-y-8 md:space-y-10'>
+					<div className='space-y-8 md:space-y-10 lg:text-right'>
 						<div>
 							<FontAwesomeIcon
 								icon={faSmile}

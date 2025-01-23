@@ -30,7 +30,7 @@ const ContactSection = () => {
 	}
 
 	return (
-		<section className='bg-gray-50 py-12'>
+		<section className='bg-gray-50 py-12' id='contact'>
 			<div className='container mx-auto px-6 lg:px-12'>
 				<h2 className='text-3xl font-bold text-blue-600 mb-8'>
 					Как меня найти
@@ -40,13 +40,13 @@ const ContactSection = () => {
 					{/* Адреса и рейтинги */}
 					<div>
 						<p className='text-lg font-semibold mb-4'>
-							Я работаю в Москве по двум адресам:
+							Я работаю в г. Алматы по данному адресу:
 						</p>
 						<div className='mb-6'>
 							<h3 className='font-bold text-blue-600'>
-								Стоматология Денталия:
+								Стоматология OnlyDent:
 							</h3>
-							<p>Куркино, Соколово-мещецкая дом 25</p>
+							<p>Г. Алматы, Самал-1, дом 32</p>
 							<div className='flex space-x-6 mt-2'>
 								<div>
 									<p className='font-semibold text-gray-700'>Оборудование</p>
@@ -63,7 +63,7 @@ const ContactSection = () => {
 							</div>
 						</div>
 
-						<div>
+						{/* <div>
 							<h3 className='font-bold text-blue-600'>
 								Центр функциональной стоматологии:
 							</h3>
@@ -82,13 +82,13 @@ const ContactSection = () => {
 									<div className='flex space-x-1'>{stars(4, true)}</div>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					{/* Карта */}
 					<div>
 						<iframe
-							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.0459689250224!2d76.9428782761762!3d43.250458378385815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eeb38d5d70d%3A0xdebb6108a7ad460!2sPanfilov%20St%20126%2C%20Almaty%20050000%2C%20Kazakhstan!5e0!3m2!1sen!2skr!4v1737603960392!5m2!1sen!2skr'
+							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.0572376607256!2d76.95156387617519!3d43.22925957974698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f8e1bd4fe19%3A0x830b4daa0c277a1d!2sSamal-2%20Dom%2032!5e0!3m2!1sen!2skr!4v1737622733684!5m2!1sen!2skr'
 							width='100%'
 							height='300'
 							style={{ border: 0 }}
@@ -105,7 +105,7 @@ const ContactSection = () => {
 					</p>
 					<div className='flex justify-center space-x-6 mt-4'>
 						<a
-							href='https://vk.com/fizuli_ahadov?from=search'
+							href='https://vk.com/fizuli_ahadov'
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-blue-500'
@@ -121,7 +121,7 @@ const ContactSection = () => {
 							<FontAwesomeIcon icon={faTelegram} size='2x' />
 						</a>
 						<a
-							href='https://www.instagram.com/dr.makhdi/'
+							href='https://www.instagram.com/onlydent_kz'
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-red-500'
@@ -143,7 +143,7 @@ const ContactSection = () => {
 							href='mailto:fizuli.akhadov@gmail.com'
 							className='text-blue-500 hover:underline'
 						>
-							fizuli.akhadov@gmail.com
+							fizuli.ahadov@gmail.com
 						</a>
 					</p>
 				</div>

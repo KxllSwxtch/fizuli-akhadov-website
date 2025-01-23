@@ -5,9 +5,9 @@ const HeroSection = () => {
 
 	return (
 		<div className='relative bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 min-h-screen flex items-center'>
-			<div className='container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 lg:px-24'>
+			<div className='container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 lg:px-24 relative h-full'>
 				{/* Текстовая часть */}
-				<div className='text-center md:text-left'>
+				<div className='text-center md:text-left z-10 md:w-1/2'>
 					<p className='text-sm text-gray-700'>
 						Врач стоматолог-терапевт, ортопед
 					</p>
@@ -21,19 +21,22 @@ const HeroSection = () => {
 					</p>
 					<button
 						onClick={() => setIsModalOpen(true)}
-						className='mt-6 bg-blue-500 text-white py-2 px-6 rounded-lg text-lg hover:bg-blue-600'
+						className='mt-6 bg-blue-500 text-white py-2 px-6 rounded-lg text-lg hover:bg-blue-600 cursor-pointer'
 					>
 						Записаться на прием
 					</button>
 				</div>
 
-				{/* Фото */}
-				<div className='mb-6 md:mb-0 md:ml-12'>
-					<img
-						src='https://via.placeholder.com/300x400'
-						alt='Доктор Ахадов'
-						className='rounded-lg shadow-lg'
-					/>
+				{/* Видео справа на больших экранах */}
+				<div className='mb-6 md:mb-0 md:ml-12 md:w-1/2 hidden md:block'>
+					<video
+						src='https://res.cloudinary.com/pomegranitedesign/video/upload/v1737597152/fizuli/fizuli_bg.mov'
+						autoPlay
+						playsInline
+						loop
+						muted
+						className='rounded-lg w-full h-[40rem]'
+					></video>
 				</div>
 			</div>
 
@@ -98,7 +101,7 @@ const HeroSection = () => {
 						</form>
 						<button
 							onClick={() => setIsModalOpen(false)}
-							className='absolute top-4 right-4 text-gray-400 hover:text-gray-800'
+							className='absolute top-10 right-10 text-gray-400 hover:text-gray-800 cursor-pointer text-2xl'
 						>
 							✖
 						</button>
