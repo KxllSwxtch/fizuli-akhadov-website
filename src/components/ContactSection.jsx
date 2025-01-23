@@ -4,6 +4,7 @@ import {
 	faVk,
 	faTelegram,
 	faInstagram,
+	faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons'
 
 const ContactSection = () => {
@@ -104,7 +105,7 @@ const ContactSection = () => {
 					</p>
 					<div className='flex justify-center space-x-6 mt-4'>
 						<a
-							href='#'
+							href='https://vk.com/fizuli_ahadov?from=search'
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-blue-500'
@@ -123,9 +124,17 @@ const ContactSection = () => {
 							href='https://www.instagram.com/dr.makhdi/'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='text-blue-500'
+							className='text-red-500'
 						>
 							<FontAwesomeIcon icon={faInstagram} size='2x' />
+						</a>
+						<a
+							href='https://api.whatsapp.com/send/?phone=77758247097'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='text-green-500'
+						>
+							<FontAwesomeIcon icon={faWhatsapp} size='2x' />
 						</a>
 					</div>
 					<p className='mt-4 text-gray-600'>
