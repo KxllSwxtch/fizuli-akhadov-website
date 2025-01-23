@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/       # Закрыть доступ к папке private
+Disallow: /temp/          # Закрыть доступ к папке temp
+Allow: /
+
+Sitemap: https://onlydent.kz/sitemap.xml
