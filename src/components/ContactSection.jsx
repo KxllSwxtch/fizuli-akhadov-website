@@ -47,7 +47,7 @@ const ContactSection = () => {
 								Стоматология OnlyDent:
 							</h3>
 							<p>Г. Алматы, Самал-1, дом 32</p>
-							<div className='flex space-x-6 mt-2'>
+							<div className='flex flex-wrap space-x-6 mt-2'>
 								<div>
 									<p className='font-semibold text-gray-700'>Оборудование</p>
 									<div className='flex space-x-1'>{stars(5, true)}</div>
@@ -57,7 +57,7 @@ const ContactSection = () => {
 									<div className='flex space-x-1'>{stars(5)}</div>
 								</div>
 								<div>
-									<p className='font-semibold text-gray-700'>Цена</p>
+									<p className='font-semibold text-gray-700 mt-2'>Цена</p>
 									<div className='flex space-x-1'>{stars(4, true)}</div>
 								</div>
 							</div>
