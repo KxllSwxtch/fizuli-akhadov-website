@@ -1,4 +1,29 @@
+import { useState } from 'react'
+
 const ContactForm = () => {
+	const [formData, setFormData] = useState({
+		name: '',
+		phone: '',
+		message: '',
+	})
+
+	const handleInputChange = (e) => {
+		const { name, value } = e.target
+		setFormData({ ...formData, [name]: value })
+	}
+
+	const handleFormSubmit = (e) => {
+		e.preventDefault()
+		const whatsappNumber = '+77758247097'
+		const whatsappMessage = `Здравствуйте!\n\nМеня зовут ${formData.name}.\nМой номер телефона: ${formData.phone}\n\n${formData.message}`
+		const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+			whatsappMessage,
+		)}`
+		window.open(whatsappUrl, '_blank')
+
+		setFormData({ name: '', phone: '', message: '' })
+	}
+
 	return (
 		<section className='relative bg-blue-50 py-12'>
 			<div className='container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between'>
@@ -21,7 +46,7 @@ const ContactForm = () => {
 					</h3>
 
 					{/* Поля формы */}
-					<form className='space-y-4'>
+					<form className='space-y-4' onSubmit={handleFormSubmit}>
 						<div>
 							<label
 								htmlFor='name'
@@ -32,6 +57,9 @@ const ContactForm = () => {
 							<input
 								type='text'
 								id='name'
+								name='name'
+								value={formData.name}
+								onChange={handleInputChange}
 								className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 								placeholder='Введите ваше имя'
 								required
@@ -47,6 +75,9 @@ const ContactForm = () => {
 							<input
 								type='tel'
 								id='phone'
+								name='phone'
+								value={formData.phone}
+								onChange={handleInputChange}
 								className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 								placeholder='Введите ваш телефон'
 								required
@@ -62,13 +93,17 @@ const ContactForm = () => {
 							<textarea
 								id='message'
 								rows='3'
+								name='message'
+								value={formData.message}
+								onChange={handleInputChange}
 								className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 								placeholder='Опишите вашу проблему'
 							></textarea>
 						</div>
 						<button
 							type='submit'
-							className='w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200'
+							onClick={handleFormSubmit}
+							className='w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 cursor-pointer'
 						>
 							Записаться на прием
 						</button>

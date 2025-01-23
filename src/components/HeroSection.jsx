@@ -3,14 +3,36 @@ import { useState } from 'react'
 const HeroSection = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
+	const [formData, setFormData] = useState({
+		name: '',
+		phone: '',
+		message: '',
+	})
+
+	const handleInputChange = (e) => {
+		const { name, value } = e.target
+		setFormData({ ...formData, [name]: value })
+	}
+
+	const handleFormSubmit = (e) => {
+		e.preventDefault()
+		const whatsappNumber = '+77758247097'
+		const whatsappMessage = `Здравствуйте!\n\nМеня зовут ${formData.name}.\nМой номер телефона: ${formData.phone}\n\n${formData.message}`
+		const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+			whatsappMessage,
+		)}`
+		window.open(whatsappUrl, '_blank')
+
+		setFormData({ name: '', phone: '', message: '' })
+		setIsModalOpen(false)
+	}
+
 	return (
 		<div className='relative bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 min-h-screen flex items-center'>
 			<div className='container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 lg:px-24 relative h-full'>
 				{/* Текстовая часть */}
 				<div className='text-center md:text-left z-10 md:w-1/2'>
-					<p className='text-sm text-gray-700'>
-						Врач стоматолог-терапевт, ортопед
-					</p>
+					<p className='text-sm text-gray-700'>Врач стоматолог</p>
 					<h1 className='text-4xl md:text-5xl font-bold text-gray-800 mt-2'>
 						Ахадов Физули Акифович
 					</h1>
@@ -47,7 +69,7 @@ const HeroSection = () => {
 						<h2 className='text-xl font-bold text-gray-800 mb-4'>
 							Запись на прием
 						</h2>
-						<form className='space-y-4'>
+						<form className='space-y-4' onSubmit={handleFormSubmit}>
 							<div>
 								<label
 									htmlFor='name'
@@ -58,6 +80,9 @@ const HeroSection = () => {
 								<input
 									type='text'
 									id='name'
+									name='name'
+									value={formData.name}
+									onChange={handleInputChange}
 									className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 									placeholder='Введите ваше имя'
 									required
@@ -73,6 +98,9 @@ const HeroSection = () => {
 								<input
 									type='tel'
 									id='phone'
+									name='phone'
+									value={formData.phone}
+									onChange={handleInputChange}
 									className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 									placeholder='Введите ваш телефон'
 									required
@@ -88,6 +116,9 @@ const HeroSection = () => {
 								<textarea
 									id='message'
 									rows='3'
+									name='message'
+									value={formData.message}
+									onChange={handleInputChange}
 									className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
 									placeholder='Опишите вашу проблему'
 								></textarea>
