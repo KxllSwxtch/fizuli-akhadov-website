@@ -7,7 +7,7 @@ const Footer = () => {
 				{/* Логотип и информация */}
 				<div className='text-center md:text-left mb-4 md:mb-0'>
 					<h2 className='text-lg font-bold'>Ахадов Физули Акифович</h2>
-					<p className='text-sm'>Врач стоматолог-терапевт, ортопед</p>
+					<p className='text-sm'>Врач стоматолог</p>
 				</div>
 
 				{/* Политика конфиденциальности */}
